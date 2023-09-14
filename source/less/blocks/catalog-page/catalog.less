@@ -1,0 +1,115 @@
+.catalog__wrapper {
+  box-sizing: border-box;
+  padding-top: 27px;
+  margin: 0 auto;
+  width: 320px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 63px 30px 68px 30px;
+    width: 768px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 71px;
+    padding-bottom: 0;
+    margin-bottom: 75px;
+  }
+}
+
+.catalog__wrapper::before {
+  position: absolute;
+  content: "";
+  width: 10000%;
+  border-top: 1px solid @darkgray;
+  top: 0;
+  left: -5000%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.catalog__title {
+  .titles-weight;
+  .main-title;
+  margin: 0;
+  margin-bottom: 41px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 82px;
+    .main-title-tablet;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 84px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  .list-style;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 245px 245px 245px 245px;
+    gap: 63px 80px;
+    width: 1220px;
+  }
+}
+
+.catalog__item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 38px;
+    padding-right: 38px;
+    background-image: linear-gradient(to bottom, @white 0 81px, @basicgray 81px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 33px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 35px;
+    padding-right: 30px;
+    padding-top: 0;
+  }
+}
+
+.catalog__item::before {
+  position: absolute;
+  content: "";
+  width: 10000%;
+  border-top: 1px solid @border-header;
+  top: 0;
+  left: -5000%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

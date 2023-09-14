@@ -1,0 +1,114 @@
+.site-list {
+  .list-style;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 35px;
+    padding-top: 30px;
+    padding-left: 3px;
+    padding-right: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-left: 2px;
+  }
+}
+
+.site-list__item {
+  text-align: center;
+  border-top: 1px solid @border-header;
+  .mobile-menu;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    .header-menu-text;
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    padding-bottom: 0;
+    border: none;
+    margin-top: 2px;
+  }
+}
+
+.site-list__item-link {
+  padding-top: 22px;
+  padding-bottom: 23px;
+  .link-style;
+  display: block;
+  color: @black;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    .menu-font-tablet;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: flex-end;
+    .font-button-white-tablet;
+    padding-top: 14px;
+    padding-bottom: 8px;
+  }
+}
+
+.site-list__item--active {
+  position: relative;
+}
+
+.site-list__item--active::after {
+  @media (min-width: @tablet-width) {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.site-list__item--white .site-list__item-link {
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
+}
+
+// .site-list--white-active {
+//   position: relative;
+// }
+
+.site-list__item--active.site-list__item--white::before {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    background-color: @white;
+    width: 100%;
+    height: 2px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+}

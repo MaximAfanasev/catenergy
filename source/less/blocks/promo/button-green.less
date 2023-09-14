@@ -1,0 +1,26 @@
+.button-green {
+  background-color: @green;
+  width: 280px;
+  .green-button;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    .promo-subtitle-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 342px;
+    left: 60px;
+  }
+}
+
+.button-green:hover {
+  background-color: @green-light;
+}
+
+.button-green:active {
+  background-color: @green-light;
+  color: rgba(255, 255, 255, 0.3);
+}

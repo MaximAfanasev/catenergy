@@ -1,0 +1,26 @@
+.main-footer {
+  background-color: @basicgray;
+  width: 100%;
+}
+
+.main-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  color: @black;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    display: flex;
+    padding-top: 58px;
+    padding-bottom: 55px;
+    .tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 57px 110px 58px 110px;
+  }
+}
